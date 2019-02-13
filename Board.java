@@ -9,8 +9,21 @@ class Board{
     * @return   The board represented as a string
     */
     public String toString(){
+        //{{1...7}, {1...7}, {1...7}, {1...7}, {1...7}, {1...7}}
+        for(int i = 0 ; i < 6 ; i++){
+            System.out.print("| ");
+            for(int j = 0 ; j < 7 ; j++){
+                if(positions[i][j]==0){
+                    System.out.print("  | ");
+                }else{
+                    System.out.print(positions[i][j]+" | ");
+                }
+            }
+            System.out.print("\n");
+        }
         return null;
     }
+
 
     /**
     * Checks to see if a piece can be played in a given column

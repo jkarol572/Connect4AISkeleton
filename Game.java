@@ -8,6 +8,18 @@ class Game{
         System.out.println("\t-If you ever want to leave the game type 'exit'");
 
         Board board = new Board();
+
+        for(int i = 0 ; i < 6 ; i++){
+            for(int j = 0 ; j<7; j++){
+                if(Math.random()>.6){
+                    if(Math.random()>.5){
+                board.positions[i][j] = 'X';
+                    }else{
+                        board.positions[i][j] = 'O';
+                    }
+                }
+            }
+        }
         System.out.println(board);
 
         // Keep playing until somebody wins
